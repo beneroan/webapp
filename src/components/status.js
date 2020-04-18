@@ -18,7 +18,7 @@ class Status extends Component {
             this.setState({
                loading: false,
                free: data.free,
-               lastFree: data.lastFree || new Date()
+               lastFree: data.lastFree ? new Date(data.lastFree) : new Date()
             })
          });
    }
@@ -38,10 +38,13 @@ class Status extends Component {
             marginTop: -6,
             marginLeft: 10
          }}>{this.props.machine}</p>
-         <br />
          {
-            !this.state.free
-            ? <p style={{}}>In use for {Math.floor(((new Date()) - this.state.lastFree) / 1000)} minutes</p>
+            !this.state.free && !this.state.loading
+            ? <p style={{
+               marginTop: -6,
+               textAlign: 'right',
+               flexGrow: 1
+            }}>In use for {Math.floor(((new Date()) - this.state.lastFree) / 1000)} minutes</p>
             : null
          }
       </div>
