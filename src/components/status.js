@@ -6,17 +6,19 @@ class Status extends Component {
 
       this.state = {
          loading: true,
-         free: false
+         free: false,
+         lastFree: null
       }
    }
 
    componentDidMount () {
-      fetch('/status/machine?wing=' + this.props.wing + '&machine=' + this.props.machine)
+      fetch('http://192.168.1.196:5000/status/machine?wing=' + this.props.wing + '&machine=' + this.props.machine)
          .then(response => response.json())
          .then(data => {
             this.setState({
                loading: false,
-               free: data.free
+               free: data.free,
+               lastFree: data.lastFree || new Date()
             })
          });
    }
@@ -36,6 +38,12 @@ class Status extends Component {
             marginTop: -6,
             marginLeft: 10
          }}>{this.props.machine}</p>
+         <br />
+         {
+            !this.state.free
+            ? <p style={{}}>In use for {Math.floor(((new Date()) - this.state.lastFree) / 1000)} minutes</p>
+            : null
+         }
       </div>
    )
 }
