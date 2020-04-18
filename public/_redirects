@@ -1,1 +1,2 @@
 /status/* http://taphie.world:5000/status/:splat 200!
+/reminder http://taphie.world:5000/reminder 200!
