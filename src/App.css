@@ -1,9 +1,14 @@
+body {
+  background: #222;
+}
+
 .wing {
   width: 40%;
   margin: 30px auto;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 1px 3px #0008;
+  background: #fff;
 }
 
 input {

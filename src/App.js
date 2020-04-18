@@ -22,10 +22,10 @@ class App extends Component {
     <div className="App">
       <img style={{
         width: '20%',
-        margin: '20px auto -30px auto',
+        margin: '20px auto -20px auto',
         display: 'block'
       }} src='/logo.png' />
-      <h1 style={{ textAlign: 'center', color: '#333' }}>LitLaundry</h1>
+      <h1 style={{ textAlign: 'center', color: '#fff' }}>LitLaundry</h1>
       <input type='text' placeholder='Filter wing...' value={this.state.search} onChange={this.handleChange}/>
       {
         Object.keys(machines).map(key => (
