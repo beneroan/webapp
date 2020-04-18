@@ -1,0 +1,14 @@
+{
+   "A100": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "B100": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "C100": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "D100": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "A200": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "B200": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "C200": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "D200": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "A300": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "B300": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "C300": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"],
+   "D300": ["Laundry Machine 1", "Laundry Machine 2", "Dryer 1", "Dryer 2"]
+}

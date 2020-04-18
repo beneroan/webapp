@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import machines from './machines.json';
+import Status from './components/status';
 
-function App() {
-  return (
+class App extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      search: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({search: event.target.value});
+  }
+
+  render = () => (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type='text' placeholder='Filter wing...' value={this.state.search} onChange={this.handleChange}/>
+      {
+        Object.keys(machines).map(key => (
+          key.toLowerCase().indexOf(this.state.search.toLowerCase()) >= 0
+          ?
+            <div className='wing'>
+              <h2>{key}</h2>
+              {
+                machines[key].map(machine => (
+                  <Status wing={key} machine={machine} />
+                ))
+              }
+            </div>
+          : null
+        ))
+      }
     </div>
-  );
+  )
 }
 
 export default App;
