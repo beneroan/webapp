@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const URL = 'http://localhost:5000'
+const URL = ''
 
 class Status extends Component {
    constructor (props) {
