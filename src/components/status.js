@@ -11,7 +11,7 @@ class Status extends Component {
    }
 
    componentDidMount () {
-      fetch('http://taphie.world:5000/status/machine?wing=' + this.props.wing + '&machine=' + this.props.machine)
+      fetch('/status/machine?wing=' + this.props.wing + '&machine=' + this.props.machine)
          .then(response => response.json())
          .then(data => {
             this.setState({
